@@ -8,4 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordInput.getAttribute("type") === "password" ? "text" : "password";
     passwordInput.setAttribute("type", type);
   });
+
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Previne o comportamento padrão do formulário
+    window.location.href = "home.html";
+  });
 });
