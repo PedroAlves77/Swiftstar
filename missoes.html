@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>SwiftStars — Missões</title>
+  <link rel="stylesheet" href="estilo/style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="topbar navbar navbar-expand-lg bg-orange navbar-dark rounded mb-3 px-3">
+      <div class="brand"><img src="assets/logo.svg" class="logo" alt="">
+        <h1>Missões</h1>
+      </div>
+     <nav class="menu top-actions d-none d-lg-flex" style="margin-top:8px">
+        <a href="home.html" class="active">Home</a>
+        <a href="missoes.html">Missões</a>
+        <a href="treinamentos.html">Aulas</a>
+        <a href="recompensas.html">Notificações</a>
+       <a href="perfil.html"> <img src="assets/foto com moldura.png" style="scale: 80%;">
+        </a>
+      </nav>
+      <!-- Botão hambúrguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral"
+        aria-controls="menuLateral">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-flex align-items-center mb-3">
+          <img src="assets/foto com moldura.png" alt="">
+          <div>
+            <h6 class="mb-0">Fernando Fiap</h6>
+            <small class="text-muted">Nível 7</small>
+          </div>
+        </div>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="home.html"> Home</a>
+          <a class="nav-link" href="missoes.html"> Missões</a>
+          <a class="nav-link" href="treinamentos.html"> Aulas</a>
+          <a class="nav-link" href="recompensas.html"> Notificações</a>
+          <a class="nav-link" href="perfil.html"> Perfil</a>
+        </nav>
+      </div>
+    </div>
+
+    <div style="margin-top:12px">
+      <section class="card">
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button class="btn ghost">Missões Diárias</button>
+          <button class="btn ghost">Missões Semanais</button>
+          <button class="btn ghost">Missões Especiais</button>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:12px">
+        <div class="missions-grid">
+         
+          <div class="mission">
+            <div class="title">
+              <h4>Login Diário</h4><span class="small">Completar</span>
+            </div>
+            <div class="desc">Entre no aplicativo</div>
+            <button class="btn complete">Completar</button>
+            <div class="progress"><i style="width:100%"></i></div>
+          </div>
+
+          <div class="mission">
+            <div class="title">
+              <h4>Vendas semanais</h4><span class="small">Completar</span>
+            </div>
+            <div class="desc">Venda 10 picanhas</div>
+            <button class="btn complete">Completar</button>
+            <div class="progress"><i style="width:0%"></i></div>
+          </div>
+
+          <div class="mission">
+            <div class="title">
+              <h4>Mestre do login</h4><span class="small">Completar</span>
+            </div>
+            <div class="desc">Entre no aplicativo 10 dias</div>
+            <button class="btn complete">Completar</button>
+            <div class="progress"><i style="width:20%"></i></div>
+          </div>
+
+          <div class="mission">
+            <div class="title">
+              <h4>Seja Muito bem avaliado</h4><span class="small">2/5</span>
+            </div>
+            <div class="desc">Receba avaliações de nota 8+ 5x</div>
+            <div class="progress"><i style="width:40%"></i></div>
+            <span class="progress-text small">2/5</span>
+            <button class="btn complete">Completar</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

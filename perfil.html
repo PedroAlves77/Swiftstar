@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>SwiftStars — Perfil</title>
+  <link rel="stylesheet" href="estilo/style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="topbar navbar navbar-expand-lg bg-orange navbar-dark rounded mb-3 px-3">
+      <div class="brand"><img src="assets/logo.svg" class="logo" alt="">
+        <h1>Perfil</h1>
+      </div>
+     <nav class="menu top-actions d-none d-lg-flex" style="margin-top:8px">
+        <a href="home.html" class="active">Home</a>
+        <a href="missoes.html">Missões</a>
+        <a href="treinamentos.html">Aulas</a>
+        <a href="recompensas.html">Notificações</a>
+        <a href="perfil.html"> <img src="assets/foto com moldura.png" style="scale: 80%;">
+        </a>
+      </nav>
+      <!-- Botão hambúrguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral"
+        aria-controls="menuLateral">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="d-flex align-items-center mb-3">
+          <img src="assets/foto com moldura.png" alt="">
+          <div>
+            <h6 class="mb-0">Fernando Fiap</h6>
+            <small class="text-muted">Nível 7</small>
+          </div>
+        </div>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="home.html"> Home</a>
+          <a class="nav-link" href="missoes.html"> Missões</a>
+          <a class="nav-link" href="treinamentos.html"> Aulas</a>
+          <a class="nav-link" href="recompensas.html"> Notificações</a>
+          <a class="nav-link" href="perfil.html"> Perfil</a>
+        </nav>
+      </div>
+    </div>
+    
+
+    <div class="layout" style="margin-top:12px">
+      <aside class="card sidebar">
+        <div class="profile-card">
+          <img src="assets/foto com moldura.png" alt="">
+          <div class="meta">
+            <h3>Fernando Fiap</h3>
+            <p class="small">FernandoFiap@gmail.com</p>
+            <div class="progress"><i style="width:30%"></i></div>
+            <small class="small">EXP 150/7000</small>
+          </div>
+        </div>
+
+        <nav class="menu" style="margin-top:12px">
+          <a href="#" class="active">Resumo</a>
+          <a href="#">Avaliações</a>
+          <a href="#">Informações</a>
+        </nav>
+      </aside>
+
+      <main class="col card">
+        <h3>Resumo</h3>
+        <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
+          <div style="flex-basis:120px">
+            <div style="font-size:20px;font-weight:800">+99</div>
+            <div class="small">Avaliações</div>
+          </div>
+          <div>
+            <div style="font-size:28px;font-weight:800">4,8</div>
+            <div class="small">Média</div>
+          </div>
+        </div>
+        <div style="margin-top:12px">
+          <h4>Comentários Recentes</h4>
+          <div class="reviews" style="margin-top:8px">
+            <div class="review">
+              <img src="assets/moldura laranja.png" alt="">
+              <p><strong>Cláudia</strong><br><span class="small">Excelente vendedor, tirou minhas dúvidas ...</span></p>
+            </div>
+            <div class="review">
+              <img src="assets/moldura laranja.png" alt="">
+              <p><strong>Jefferson</strong><br><span class="small">Ótimo atendimento! Muito educado ...</span></p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="card" style="min-width:260px">
+        <h4>Estatísticas</h4>
+        <div style="margin-top:8px">
+          <div style="display:flex;justify-content:space-between"><small>Relacionamento</small><small>85%</small></div>
+          <div class="progress" style="margin-top:6px"><i style="width:85%"></i></div>
+
+          <div style="display:flex;justify-content:space-between;margin-top:8px">
+            <small>Conhecimento</small><small>72%</small></div>
+          <div class="progress" style="margin-top:6px"><i style="width:72%"></i></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

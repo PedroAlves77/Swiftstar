@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <title>SwiftStars — Login</title>
+  <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+  <main class="login-wrapper">
+    <div class="login-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <img src="assets/SwiftStars CERTO 1.png" alt="SwiftStars" class="logo" style="height:36px">
+      </div>
+
+      <div class="card" style="margin-top:12px;background:transparent;">
+        <h1>Seja bem-vindo!</h1>
+        <form id="loginForm" class="form-row">
+          <label class="small">Email</label>
+          <input id="email" class="input" type="email" placeholder="Digite seu email" required>
+          <label class="small">Senha</label>
+          <input id="password" class="input" type="password" placeholder="Digite sua senha" required>
+          <div style="display:flex;justify-content:flex-end">
+            <a href="#" class="small" style="color:#fff;opacity:0.95">Esqueceu sua senha?</a>
+          </div>
+          <div class="login-actions">
+            <button class="btn" type="submit">Login</button>
+            <div style="display:flex;gap:8px;flex-direction:column;">
+              <button type="button" class="social-btn"><img src="assets/Facebook.png" alt=""> Facebook</button>
+              <button type="button" class="social-btn"><img src="assets/Group.png" alt=""> Google</button>
+            </div>
+            <div style="text-align:center;margin-top:6px">
+              <a href="home.html" class="small" style="color:#fff;opacity:0.95">Ainda não tem uma conta? Clique aqui!</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

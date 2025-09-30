@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --orange: #f84c1a;
+  --light: #ffffff;
+  --muted: #8b8b8b;
+  --card-bg: #ffffff;
+  --bg: #fafafa;
+  --shadow: 0 4px 10px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: var(--orange);
+}
+
+.nav-link{
+  color: #333;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  margin: 0;
+  color: #333;
+}
+
+.bg-orange {
+  background-color: var(--orange) !important;
+}
+.navbar-brand span {
+  font-weight: 700;
+}
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 12px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr 320px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.sidebar img {
+  width: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.sidebar h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+.sidebar nav a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: var(--orange);
+  color: #fff;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-bar {
+  background: #eee;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+.progress-bar .fill {
+  background: var(--orange);
+  height: 100%;
+}
+
+.btn-orange {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-orange:hover {
+  background: #d43c0f;
+}
+
+.complete{
+  background-color: #F05323;
+  color: #fff;
+}
+
+.review{
+  margin-bottom: 10px;
+  padding:15px;
+  border: 0.7px solid #fff;
+  border-radius: 18px;
+}
+
+@media (max-width: 991px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+  .right-panel {
+    order: 2;
+  }
+  .content {
+    order: 1;
+  }
+}
