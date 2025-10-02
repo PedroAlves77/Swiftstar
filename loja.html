@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja SwiftStars</title>
+    <link rel="stylesheet" href="estilo/loja/loja.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="store-container">
+      <!-- Store Header -->
+      <div class="store-header">
+        <h1>Troque Suas SwiftStars por recompensas incríveis!</h1>
+        <p>
+          Acumule pontos completando missões e troque por produtos exclusivos
+        </p>
+        <div class="user-currency">
+          <i class="fas fa-coins"></i>
+          <span id="user-stars-display">200 SwiftStars</span>
+        </div>
+      </div>
+
+      <!-- Store Stats -->
+      <div class="store-stats">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="stat-number">15</div>
+            <div class="stat-label">Itens Resgatados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="stat-number">1,250</div>
+            <div class="stat-label">Stars Gastos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-gift"></i>
+            </div>
+            <div class="stat-number">8</div>
+            <div class="stat-label">Brindes Disponíveis</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="store-categories">
+        <button class="category-btn active" data-category="all">
+          Todos os Itens
+        </button>
+        <button class="category-btn" data-category="clothing">Vestuário</button>
+        <button class="category-btn" data-category="accessories">
+          Acessórios
+        </button>
+        <button class="category-btn" data-category="digital">Digital</button>
+      </div>
+
+      <!-- Section Title -->
+      <h3 class="section-title">Brindes disponíveis</h3>
+
+      <!-- Store Items Grid -->
+      <div class="store-grid" id="store-items-grid">
+        <!-- T-shirt -->
+        <div class="store-item" data-category="clothing">
+          <div class="item-image shirt">
+            <i class="fas fa-tshirt"></i>
+            <div class="item-badge">Popular</div>
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h4 class="item-title">Camiseta SwiftStars</h4>
+              <div class="item-price">
+                <i class="fas fa-coins"></i>
+                200
+              </div>
+            </div>
+            <p class="item-description">
+              Camiseta oficial SwiftStars em algodão premium. Disponível em
+              várias cores e tamanhos.
+            </p>
+            <div class="item-footer">
+              <div class="item-quantity">
+                <i class="fas fa-box"></i>
+                <span>5 em estoque</span>
+              </div>
+              <button
+                class="redeem-btn"
+                data-item="Camiseta SwiftStars"
+                data-price="200"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                Resgatar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mug -->
+        <div class="store-item" data-category="accessories">
+          <div class="item-image mug">
+            <i class="fas fa-mug-hot"></i>
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h4 class="item-title">Caneca SwiftStars</h4>
+              <div class="item-price">
+                <i class="fas fa-coins"></i>
+                250
+              </div>
+            </div>
+            <p class="item-description">
+              Caneca de porcelana com logo SwiftStars. Perfeita para seu café ou
+              chá favorito.
+            </p>
+            <div class="item-footer">
+              <div class="item-quantity">
+                <i class="fas fa-box"></i>
+                <span>3 em estoque</span>
+              </div>
+              <button
+                class="redeem-btn disabled"
+                data-item="Caneca SwiftStars"
+                data-price="250"
+              >
+                <i class="fas fa-ban"></i>
+                Insuficiente
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift Card -->
+        <div class="store-item" data-category="digital">
+          <div class="item-image gift">
+            <i class="fas fa-gift"></i>
+            <div class="item-badge">Novo</div>
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h4 class="item-title">Cartão Presente</h4>
+              <div class="item-price">
+                <i class="fas fa-coins"></i>
+                300
+              </div>
+            </div>
+            <p class="item-description">
+              Cartão presente digital de R$ 50 para usar em qualquer loja Swift.
+            </p>
+            <div class="item-footer">
+              <div class="item-quantity">
+                <i class="fas fa-infinity"></i>
+                <span>Ilimitado</span>
+              </div>
+              <button
+                class="redeem-btn disabled"
+                data-item="Cartão Presente"
+                data-price="300"
+              >
+                <i class="fas fa-ban"></i>
+                Insuficiente
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cap -->
+        <div class="store-item" data-category="accessories">
+          <div class="item-image cap">
+            <i class="fas fa-baseball-cap"></i>
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h4 class="item-title">Boné SwiftStars</h4>
+              <div class="item-price">
+                <i class="fas fa-coins"></i>
+                180
+              </div>
+            </div>
+            <p class="item-description">
+              Boné ajustável com bordado SwiftStars. Proteção e estilo para o
+              dia a dia.
+            </p>
+            <div class="item-footer">
+              <div class="item-quantity">
+                <i class="fas fa-box"></i>
+                <span>7 em estoque</span>
+              </div>
+              <button
+                class="redeem-btn"
+                data-item="Boné SwiftStars"
+                data-price="180"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                Resgatar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Credits -->
+        <div class="store-item" data-category="digital">
+          <div class="item-image mobile">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h4 class="item-title">Créditos Celular</h4>
+              <div class="item-price">
+                <i class="fas fa-coins"></i>
+                150
+              </div>
+            </div>
+            <p class="item-description">
+              R$ 20 em créditos para recarga de celular. Válido para todas as
+              operadoras.
+            </p>
+            <div class="item-footer">
+              <div class="item-quantity">
+                <i class="fas fa-infinity"></i>
+                <span>Disponível</span>
+              </div>
+              <button
+                class="redeem-btn"
+                data-item="Créditos Celular"
+                data-price="150"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                Resgatar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notebook -->
+        <div class="store-item" data-category="accessories">
+          <div class="item-image notebook">
+            <i class="fas fa-clipboard"></i>
+          </div>
+          <div class="item-content">
+            <div class="item-header">
+              <h4 class="item-title">Caderno SwiftStars</h4>
+              <div class="item-price">
+                <i class="fas fa-coins"></i>
+                120
+              </div>
+            </div>
+            <p class="item-description">
+              Caderno de anotações com capa personalizada e páginas pautadas de
+              alta qualidade.
+            </p>
+            <div class="item-footer">
+              <div class="item-quantity">
+                <i class="fas fa-box"></i>
+                <span>12 em estoque</span>
+              </div>
+              <button
+                class="redeem-btn"
+                data-item="Caderno SwiftStars"
+                data-price="120"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                Resgatar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="store-footer">
+        <button class="back-btn" onclick="window.history.back()">
+          <i class="fas fa-arrow-left"></i>
+          Voltar
+        </button>
+      </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notification-container"></div>
+
+    <script src="js/loja/loja.js"></script>
+  </body>
+</html>
