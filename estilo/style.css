@@ -149,47 +149,141 @@ a{
 /* barra de progresso */
 .progress {
   width: 100%;
-  background: #f0f0f0;
-  height: 10px;
+  background: rgba(248, 76, 26, 0.1);
+  height: 8px;
   border-radius: 999px;
   overflow: hidden;
-  margin-top: 8px;
+  margin: 12px 0;
 }
 
 .progress>i {
   display: block;
   height: 100%;
   background: var(--orange);
-  width: 0%
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.mission-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.progress-text {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.btn.complete {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.btn.complete i {
+  font-size: 12px;
+}
+
+.btn.complete:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(248, 76, 26, 0.2);
+}
+
+.missions-content {
+  margin-top: 24px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.mission-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px;
+}
+
+.mission-filters .btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.mission-filters .btn i {
+  font-size: 14px;
+}
+
+.mission-filters .btn.active {
+  background: rgba(248, 76, 26, 0.1);
+  color: var(--orange);
+  border-color: var(--orange);
 }
 
 .missions-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px
+  gap: 16px;
 }
 
 .mission {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.mission .title {
+.mission:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.mission-header {
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: flex-start;
+  margin-bottom: 12px;
 }
 
-.mission .title h4 {
+.mission-info {
+  flex: 1;
+}
+
+.mission-title {
   margin: 0;
-  font-size: 14px
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
 }
 
-.mission .desc {
-  color: var(--muted);
+.mission-status {
   font-size: 13px;
-  margin-bottom: 4px
+  color: var(--muted);
+}
+
+.mission-reward {
+  background: rgba(248, 76, 26, 0.1);
+  color: var(--orange);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mission-desc {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 8px 0 12px;
+  line-height: 1.4;
 }
 
 .btn {
@@ -440,6 +534,82 @@ button {
   touch-action: manipulation
 }
 
+.user-profile {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(248, 76, 26, 0.05);
+  border-radius: var(--radius);
+}
+
+.user-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-level {
+  margin-top: 8px;
+}
+
+.level-badge {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.level-progress {
+  width: 100%;
+}
+
+.level-text {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #333;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.mobile-nav .nav-link i {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.mobile-nav .nav-link.active {
+  background: var(--orange);
+  color: white;
+}
+
+.mobile-nav .nav-link.active i {
+  color: white;
+}
+
 @media (max-width: 991px) {
   .layout {
     grid-template-columns: 1fr;
@@ -452,5 +622,11 @@ button {
   }
   .content {
     order: 1;
+  }
+  .missions-grid {
+    grid-template-columns: 1fr;
+  }
+  .mission-filters {
+    justify-content: center;
   }
 }
